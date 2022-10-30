@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { grey } from '@mui/material/colors'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
@@ -19,6 +20,10 @@ const roleList = ['employee']
 function Login() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const handleSubmit = async (value) => {
         try {

@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { Box, IconButton } from '@mui/material'
 import { orange } from '@mui/material/colors'
 import React from 'react'
-import { Navigation, Pagination, Autoplay } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper'
 // swiper css
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -81,7 +81,6 @@ function SwiperSlider({ data, number = 1 }) {
                     prevEl: '.btn-swiper-prev',
                     nextEl: '.btn-swiper-next',
                 }}
-                pagination={{ clickable: true }}
             >
                 {data?.map((x) => (
                     <SwiperSlide key={x}>

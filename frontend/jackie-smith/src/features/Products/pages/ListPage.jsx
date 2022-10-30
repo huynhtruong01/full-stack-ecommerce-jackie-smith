@@ -110,7 +110,7 @@ function ListPage() {
     // category change
     const handleFilterCategory = async (value) => {
         try {
-            console.log(value)
+            // console.log(value)
 
             if (value === '') {
                 const newFilters = { ...filters, page: 1 }

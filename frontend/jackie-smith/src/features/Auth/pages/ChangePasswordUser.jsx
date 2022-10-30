@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { grey } from '@mui/material/colors'
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
@@ -12,6 +13,10 @@ ChangePasswordUser.propTypes = {}
 function ChangePasswordUser() {
     const user = useSelector((state) => state?.userTemporary?.temporaryUser)
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const handleSubmit = async (values) => {
         try {
